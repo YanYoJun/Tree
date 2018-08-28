@@ -66,6 +66,9 @@ public class myMain {
         return root;
     }
 
+    /**
+     * 将中序序列中midBegin与MidEnd的字符依次从level中提取出来，保持level中的字符顺序不变
+     */
     private static char[] getLevelStr(char[] mid, int midBegin, int midEnd, char[] level) {
         char[] result = new char[midEnd - midBegin + 1];
         int curLoc = 0;
@@ -77,6 +80,9 @@ public class myMain {
         return result;
     }
 
+    /**
+     * 如果str字符串的begin和end位置之间（包括begin和end）含有字符target,则返回true。
+     */
     private static boolean contains(char[] str, char target, int begin, int end) {
         for (int i = begin; i <= end; i++) {
             if (str[i] == target) {
@@ -102,7 +108,7 @@ public class myMain {
     }
 
     /**
-     * 根据前序和中序遍历还原树
+     * 根据后序和中序遍历还原树
      */
     private static Node buildTreeByMidEnd(char[] mid, int midBegin, int midEnd, char[] end, int endBegin, int endEnd) {
         Node root = new Node();

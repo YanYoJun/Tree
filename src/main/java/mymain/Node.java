@@ -22,7 +22,6 @@ public class Node {
     /**
      * 层序遍历
      */
-
     public String readLevel() {
         Queue<Node> queue = new LinkedList<>();
         StringBuilder result = new StringBuilder();
